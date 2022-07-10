@@ -15,18 +15,40 @@ body {
     margin: 0;
 }
 
+h3 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.hidden {
+    display: none;
+}
+ul {
+    padding: 0;
+}
+
+
 
 @media (min-width: 1200px) {
     .header {
         width: 100%;
-        height: 31.5vw;
         background: url(../images/banner-bg.jpg) no-repeat;
         background-size: cover;
+        position: relative;
     }
-    .header:after {
+    .header:before {
         content: '';
         width: 100%;
-        height: 31.5vw;
+        height: 100%;
         position: absolute;
         background-color: #000000;
         background-size: cover;
@@ -38,31 +60,36 @@ body {
         color: white;
         z-index: 1;
         justify-content: center;
-        position: absolute;
         flex-wrap: wrap;
     }
     .conteiner-logo {
         display: flex;
         width: 71%;
-        margin-top: 30px;
+        margin-top: 1.81vw;
+        z-index: 1;
     }
 
     .logo {
         flex: 1;
     }
     .logo-img {
-        width: 180px;
-        height: 40px;
+        width: 10.84vw;
+        height: 2.4vw;
     }
     .menu-list {
         display: flex;
-        width: 460px;
+        width: 27.72vw;
         justify-content: space-between;
         align-items: center;
+        list-style-type: none;
+    }
+    .menu-list a {
+        text-decoration: none;
+        color: white;
     }
     .menu {
         font-family: OpenSans, Arial, sans-serif;
-        font-size: 13px;
+        font-size: 0.8vw;
         font-weight: 400;
         text-transform: uppercase;
     }
@@ -77,15 +104,18 @@ body {
         width: 100%;
         justify-content: center;
         align-items: center;
-        height: 25.3vw;
+        z-index: 1;
+        padding-bottom: 8.92vw;
+        margin-top: 4.4vw;
     }
     .intro {
-        width: 700px;
+        width: 42.12vw;
         font-family: OpenSans, Arial, sans-serif;
-        font-size: 45px;
+        font-size: 2.71vw;
         font-weight: 700;
         text-transform: uppercase;
         text-align: center;
+        line-height: 4.3vw;
     }
 
     /* "Сейчас в тренде" */
@@ -103,25 +133,26 @@ body {
         text-transform: uppercase;
         margin-top: 3.8vw;
     }
-    .trend-line {
-        display: block;
-        width: 65px;
-	    height: 3px;
-        background-color: #b59f5b;
-        margin-top: 0.8vw;
-    }
 
+    .trend-title:after {
+        content: '';
+        display: block;
+        width: 4.6vw;
+	    height: 0.18vw;
+        background-color: #b59f5b;
+        margin: 0.8vw auto 0 auto;
+    }
     .trend-articles {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        margin-top: 1.7vw;
+        margin-top: 1.4vw;
     }
 
     .trend-article {
         position: relative;
         display: flex;
-        width: 24.2vw;
+        width: 24%;
         height: 19.2vw;
     }
     .article-img {
@@ -154,16 +185,16 @@ body {
     }
     .article-title {
         text-transform: uppercase;
-        color: #ffffff;
         font-size: 1.21vw;
         font-family: OpenSans, Arial, sans-serif;
         font-weight: 700;
         line-height: 1.4vw;
+        color: #ffffff;
+        text-decoration: none;
     }
     .trend-article-title-block {
         display: flex;
         text-transform: uppercase;
-        color: #b59f5b;
         font-family: OpenSans, Arial, sans-serif;
         font-weight: 700;
         font-size: 0.84vw;
@@ -171,12 +202,15 @@ body {
     }
     .trend-article-title {
         margin-right: 0.8vw;
+        color: #b59f5b;
+        text-decoration: none;
+        list-style-type: none;
     }
     .trend-article-title:hover {
         text-decoration: underline;
     }
 
-    /* основные статьи */
+    /* ОСНОВНОЙ МОДУЛЬ  */
     .main-block {
         width: 72%;
         margin: auto;
@@ -194,7 +228,6 @@ body {
     }
     .img-main-article {
         width: 23vw;
-        height: 17.7vw;
     }
     .body-main-article {
         display: flex;
@@ -213,6 +246,8 @@ body {
         font-family: OpenSans, Arial, sans-serif;
         font-weight: 700;
         font-size: 0.84vw;
+        text-decoration: none;
+        list-style-type: none;
     }
     .main-category:hover {
         text-decoration: underline;
@@ -253,7 +288,7 @@ body {
         display: none;
     }
 
-    /* ДОПОЛНИТЕЛЬНЫЕ МАТЕРИАЛЫ СПРАВА ОТ ОСНОВНОГО БЛОКА */
+    /* aside */
     .aside-block {
         display: flex;
         flex-direction: column;
@@ -265,14 +300,18 @@ body {
         font-size: 0.84vw;
         text-transform: uppercase;
         margin: 3.86vw auto 0 auto;
+        text-align: center;
     }
-    .line-sidebar-title {
+
+    .sidebar-title:after {
+        content: '';
         display: block;
         width: 3.92vw;
 	    height: 0.18vw;
         background-color: #b59f5b;
-        margin: 0.85vw auto 0 auto;
+        margin: 0.5vw auto 0 auto;
     }
+
     .sidebar-post {
         display: flex;
         margin-top: 1.5vw;
@@ -299,7 +338,7 @@ body {
         line-height: 1.08vw;
         width: 10.9vw;
     }
-    /* ПОИСК */
+    /* поле для поиска */
     .form-search {
         display: flex;
         margin-top: 3.61vw;
@@ -366,9 +405,13 @@ body {
         padding: 0.48vw 0.78vw;
         margin-right: 0.3vw;
         margin-bottom: 0.36vw;
+        list-style-type: none;
     }
 
     /* Категории */
+    .section-categories {
+        width: 100%;
+    }
     .sidebar-categories {
         display: flex;
         flex-direction: column;
@@ -389,7 +432,7 @@ body {
         margin-left: 0.12vw;
         color: #b59f5b;
     }
-	
+
     /* SHOP */
     .shop-block {
         display: flex;
@@ -404,12 +447,13 @@ body {
         text-transform: uppercase;
         margin-top: 3.8vw;
     }
-    .shop-line {
+    .shop-title:after {
+        content: '';
         display: block;
-        width: 65px;
-	    height: 3px;
+        width: 3.92vw;
+	    height: 0.18vw;
         background-color: #b59f5b;
-        margin-top: 0.8vw;
+        margin: 0.8vw auto 0 auto;
     }
     .shop-cards {
         display: flex;
@@ -422,6 +466,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+
     }
 
     .card-content {
@@ -486,13 +531,16 @@ body {
         width: 8.43vw;
         background-color: #b59f5b;
         border: 0;
-        /*margin-top: 1vw;*/
         color: white;
         height: 2.77vw;
         font-family: OpenSans, Arial, sans-serif;
         font-weight: 700;
         font-size: 0.84vw;
         text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
     }
 
     /* ФУТЕР */
@@ -511,19 +559,42 @@ body {
         height: 4.88vw;
         width: 72%;
         background-color: #f4f7f6;
+        padding: 0;
     }
     .icon-social {
-        width: 1.2vw;
+        width: 1.6vw;
         margin: 0 1vw;
+        list-style-type: none;
+    }
+    .addr {
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        height: 1.6vw;
+    }
+    .twitter {
+        background-image: url(../svg/004-twitter.svg);
+    }
+    .pinterest {
+        background-image: url(../svg/001-pinterest.svg);
+    }
+    .facebook {
+        background-image: url(../svg/002-facebook-logo.svg);
+    }
+    .instagram {
+        background-image: url(../svg/005-instagram.svg);
+    }
+    .tumblr {
+        background-image: url(../svg/003-tumblr.svg);
     }
     .copy-block {
-        margin-top: 4.57vw;
-        margin-bottom: 2.65vw;
+        margin-top: 3.5vw;
+        margin-bottom: 3vw;
         font-size: 0.72vw;
         color: #999999;
     }
 
-    /* popup */
+    /* ПОПАП */
     .popup-block {
         width: 100%;
         height: 100%;
@@ -672,25 +743,27 @@ body {
         display: none;
     }
 
-
 }
 
 
+
+
 @media (min-width: 640px) and (max-width: 1199px) {
+
     .header {
         width: 100vw;
-        height: 50.4vw;
         background-image: url(../images/banner-bg-tablet.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        position: relative;
     }
-    .header:after {
+    .header:before {
         content: '';
         width: 100%;
-        height: 50.4vw;
+        height: 100%;
         position: absolute;
         background-color: #000000;
-        background-size: contain;
+        background-size: cover;
         opacity: 0.6;
     }
     .conteiner-header {
@@ -699,7 +772,6 @@ body {
         color: white;
         z-index: 1;
         justify-content: center;
-        position: absolute;
         flex-wrap: wrap;
     }
 
@@ -707,6 +779,7 @@ body {
         display: flex;
         width: 90%;
         margin-top: 5.5%;
+        z-index: 1;
     }
     .logo {
         flex: 1;
@@ -735,7 +808,9 @@ body {
         width: 100%;
         justify-content: center;
         align-items: center;
-        height: 39.5vw;
+        z-index: 1;
+        margin-top: 8vw;
+        padding-bottom: 11vw;
     }
     .intro {
         width: 80vw;
@@ -761,24 +836,27 @@ body {
         text-transform: uppercase;
         margin-top: 3.8vw;
     }
-    .trend-line {
+
+    .trend-title:after {
+        content: '';
         display: block;
-        width: 65px;
-	    height: 3px;
+        width: 10vw;
+	    height: 0.4vw;
         background-color: #b59f5b;
-        margin-top: 0.8vw;
+        margin: 1vw auto 0 auto;
     }
+
     .trend-articles {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        margin-top: 1.7vw;
+        margin-top: 1.8vw;
     }
 
     .trend-article {
         position: relative;
         display: flex;
-        width: 24.2vw;
+        width: 24%;
         height: 19.2vw;
     }
     .article-img {
@@ -819,7 +897,6 @@ body {
     .trend-article-title-block {
         display: flex;
         text-transform: uppercase;
-        color: #b59f5b;
         font-family: OpenSans, Arial, sans-serif;
         font-weight: 700;
         font-size: 0.84vw;
@@ -827,6 +904,9 @@ body {
     }
     .trend-article-title {
         margin-right: 0.8vw;
+        color: #b59f5b;
+        text-decoration: none;
+        list-style-type: none;
     }
     .trend-article-title:hover {
         text-decoration: underline;
@@ -849,7 +929,6 @@ body {
     }
     .img-main-article {
         width: 50.8vw;
-        height: 39.1vw;
     }
     .body-main-article {
     }
@@ -865,6 +944,7 @@ body {
         font-family: OpenSans, Arial, sans-serif;
         font-weight: 700;
         font-size: 1.82vw;
+        text-decoration: none;
     }
     .main-category:hover {
         text-decoration: underline;
@@ -908,11 +988,12 @@ body {
         margin-top: 3.25vw;
     }
 
-    /* ДОПОЛНИТЕЛЬНЫЕ МАТЕРИАЛЫ СПРАВА ОТ ОСНОВНОГО БЛОКА */
+    /* aside */
     .aside-block {
         display: flex;
         flex-direction: column;
         width: 100%;
+        /*align-items: center;*/
         padding-left: 4.56vw;
     }
     .sidebar-title {
@@ -921,14 +1002,18 @@ body {
         font-size: 1.82vw;
         text-transform: uppercase;
         margin: 6.2vw auto 0 auto;
+        text-align: center;
     }
-    .line-sidebar-title {
+
+    .sidebar-title:after {
+        content: '';
         display: block;
         width: 8.46vw;
 	    height: 0.39vw;
         background-color: #b59f5b;
-        margin: 1.82vw auto 0 auto;
+        margin: 0.8vw auto 0 auto;
     }
+
     .sidebar-post {
         display: flex;
         margin-top: 3.64vw;
@@ -955,7 +1040,7 @@ body {
         line-height: 2.34vw;
         width: 23.57vw;
     }
-    /* поиск */
+    /* поле для поиска */
     .form-search {
         display: flex;
         margin-top: 7.81vw;
@@ -1021,6 +1106,7 @@ body {
         padding: 0.91vw 1.82vw;
         margin-right: 0.65vw;
         margin-bottom: 0.65vw;
+        list-style-type: none;
     }
     /* Категории */
     .sidebar-categories {
@@ -1058,13 +1144,15 @@ body {
         text-transform: uppercase;
         margin-top: 3.8vw;
     }
-    .shop-line {
+    .shop-title:after {
+        content: '';
         display: block;
-        width: 65px;
-	    height: 3px;
+        width: 9vw;
+	    height: 0.4vw;
         background-color: #b59f5b;
-        margin-top: 0.8vw;
+        margin: 0.8vw auto 0 auto;
     }
+
     .shop-cards {
         display: flex;
         flex-wrap: wrap;
@@ -1147,6 +1235,10 @@ body {
         font-weight: 700;
         font-size: 1.82vw;
         text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
     }
 
     /* ФУТЕР */
@@ -1165,11 +1257,36 @@ body {
         height: 10.68vw;
         width: 90%;
         background-color: #f4f7f6;
+        padding: 0;
     }
+
     .icon-social {
         width: 2.86vw;
         margin: 0 2vw;
+        list-style-type: none;
     }
+    .addr {
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        height: 2.86vw;
+    }
+    .twitter {
+        background-image: url(../svg/004-twitter.svg);
+    }
+    .pinterest {
+        background-image: url(../svg/001-pinterest.svg);
+    }
+    .facebook {
+        background-image: url(../svg/002-facebook-logo.svg);
+    }
+    .instagram {
+        background-image: url(../svg/005-instagram.svg);
+    }
+    .tumblr {
+        background-image: url(../svg/003-tumblr.svg);
+    }
+
     .copy-block {
         margin-top: 6.38vw;
         margin-bottom: 4.68vw;
@@ -1177,7 +1294,7 @@ body {
         color: #999999;
     }
 
-    /* popup */
+    /* ПОПАП */
     .popup-block {
         width: 100%;
         height: 100%;
@@ -1329,12 +1446,14 @@ body {
 }
 
 
+
 @media (min-width: 640px) and (max-width: 1199px) and (orientation: portrait){
+
     .trend-articles {
         width: 100%;
         display: flex;
         justify-content: flex-start;
-        margin-top: 1.7vw;
+        margin-top: 1.8vw;
         flex-wrap: wrap;
     }
 
@@ -1387,7 +1506,6 @@ body {
     .trend-article-title-block {
         display: flex;
         text-transform: uppercase;
-        color: #b59f5b;
         font-family: OpenSans, Arial, sans-serif;
         font-weight: 700;
         font-size: 1.84vw;
@@ -1395,6 +1513,9 @@ body {
     }
     .trend-article-title {
         margin-right: 0.8vw;
+        color: #b59f5b;
+        text-decoration: none;
+        list-style-type: none;
     }
     .trend-article-title:hover {
         text-decoration: underline;
@@ -1403,38 +1524,37 @@ body {
 }
 
 
+
 @media (max-width: 639px){
     .header {
         width: 100vw;
-        height: 51.2vw;
         background-image: url(../images/banner-bg-tablet.jpg);
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
+        position: relative;
     }
-    .header:after {
+    .header:before {
         content: '';
         width: 100%;
-        height: 51.2vw;
+        height: 100%;
         position: absolute;
         background-color: #000000;
-        background-size: contain;
+        background-size: cover;
         opacity: 0.6;
     }
     .conteiner-header {
         display: flex;
         width: 100%;
-        height: 35px;
         color: white;
         z-index: 1;
         justify-content: center;
-        position: absolute;
         flex-wrap: wrap;
     }
     .conteiner-logo {
         display: flex;
         width: 90%;
-        height: 35px;
         margin-top: 5.5%;
+        z-index: 1;
     }
     .logo {
         flex: 1;
@@ -1462,7 +1582,9 @@ body {
         width: 100%;
         justify-content: center;
         align-items: center;
-        height: 39.5vw;
+        margin-top: 8vw;
+        padding-bottom: 11vw;
+        z-index: 1;
     }
     .intro {
         width: 80vw;
@@ -1488,18 +1610,21 @@ body {
         text-transform: uppercase;
         margin-top: 3.8vw;
     }
-    .trend-line {
+
+    .trend-title:after {
+        content: '';
         display: block;
-        width: 65px;
-	    height: 3px;
+        width: 10vw;
+	    height: 0.4vw;
         background-color: #b59f5b;
-        margin-top: 0.8vw;
+        margin: 0.8vw auto 0 auto;
     }
+
     .trend-articles {
         width: 100%;
         display: flex;
         justify-content: flex-start;
-        margin-top: 1.7vw;
+        margin-top: 1.8vw;
         flex-wrap: wrap;
     }
 
@@ -1552,7 +1677,6 @@ body {
     .trend-article-title-block {
         display: flex;
         text-transform: uppercase;
-        color: #b59f5b;
         font-family: OpenSans, Arial, sans-serif;
         font-weight: 700;
         font-size: 1.84vw;
@@ -1560,12 +1684,15 @@ body {
     }
     .trend-article-title {
         margin-right: 0.8vw;
+        color: #b59f5b;
+        text-decoration: none;
+        list-style-type: none;
     }
     .trend-article-title:hover {
         text-decoration: underline;
     }
 
-    /* основные статьи */
+    /* ОСНОВНОЙ МОДУЛЬ */
     .main-block {
         width: 90%;
         margin: 0 auto;
@@ -1582,7 +1709,6 @@ body {
     }
     .img-main-article {
         width: 50.8vw;
-        height: 39.1vw;
     }
     .body-main-article {
     }
@@ -1598,6 +1724,7 @@ body {
         font-family: OpenSans, Arial, sans-serif;
         font-weight: 700;
         font-size: 1.82vw;
+        text-decoration: none;
     }
     .main-category:hover {
         text-decoration: underline;
@@ -1640,8 +1767,8 @@ body {
         background-color: #eeeeee;
         margin-top: 3.25vw;
     }
-	
-    /* ДОПОЛНИТЕЛЬНЫЕ МАТЕРИАЛЫ СПРАВА ОТ ОСНОВНОГО БЛОКА */
+
+    /* aside */
     .aside-block {
         display: flex;
         flex-direction: column;
@@ -1654,14 +1781,18 @@ body {
         font-size: 1.82vw;
         text-transform: uppercase;
         margin: 6.2vw auto 0 auto;
+        text-align: center;
     }
-    .line-sidebar-title {
+
+    .sidebar-title:after {
+        content: '';
         display: block;
         width: 8.46vw;
 	    height: 0.39vw;
         background-color: #b59f5b;
-        margin: 1.82vw auto 0 auto;
+        margin: 0.8vw auto 0 auto;
     }
+
     .sidebar-post {
         display: flex;
         margin-top: 3.64vw;
@@ -1688,7 +1819,7 @@ body {
         line-height: 2.34vw;
         width: 23.57vw;
     }
-    /* поиск */
+    /* поле для поиска */
     .form-search {
         display: flex;
         margin-top: 7.81vw;
@@ -1754,9 +1885,10 @@ body {
         padding: 0.91vw 1.82vw;
         margin-right: 0.65vw;
         margin-bottom: 0.65vw;
+        list-style-type: none;
     }
 
-    /* Категории */
+    /* Категории  */
     .sidebar-categories {
         display: flex;
         flex-direction: column;
@@ -1793,13 +1925,15 @@ body {
         text-transform: uppercase;
         margin-top: 3.8vw;
     }
-    .shop-line {
+    .shop-title:after {
+        content: '';
         display: block;
-        width: 65px;
-	    height: 3px;
+        width: 9vw;
+	    height: 0.4vw;
         background-color: #b59f5b;
-        margin-top: 0.8vw;
+        margin: 0.8vw auto 0 auto;
     }
+
     .shop-cards {
         display: flex;
         flex-wrap: wrap;
@@ -1876,13 +2010,16 @@ body {
         width: 18.1vw;
         background-color: #b59f5b;
         border: 0;
-        /*margin-top: 1vw;*/
         color: white;
         height: 6.38vw;
         font-family: OpenSans, Arial, sans-serif;
         font-weight: 700;
         font-size: 1.82vw;
         text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
     }
 
     /* ФУТЕР */
@@ -1901,11 +2038,36 @@ body {
         height: 10.68vw;
         width: 90%;
         background-color: #f4f7f6;
+        padding: 0;
     }
+
     .icon-social {
         width: 2.86vw;
         margin: 0 2vw;
+        list-style-type: none;
     }
+    .addr {
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        height: 2.86vw;
+    }
+    .twitter {
+        background-image: url(../svg/004-twitter.svg);
+    }
+    .pinterest {
+        background-image: url(../svg/001-pinterest.svg);
+    }
+    .facebook {
+        background-image: url(../svg/002-facebook-logo.svg);
+    }
+    .instagram {
+        background-image: url(../svg/005-instagram.svg);
+    }
+    .tumblr {
+        background-image: url(../svg/003-tumblr.svg);
+    }
+
     .copy-block {
         margin-top: 6.38vw;
         margin-bottom: 4.68vw;
@@ -1913,7 +2075,7 @@ body {
         color: #999999;
     }
 
-    /* popup */
+    /* ПОПАП */
     .popup-block {
         width: 100%;
         height: 100%;
@@ -2066,14 +2228,17 @@ body {
 
 
 
+
 @media (max-width: 639px) and (orientation: portrait) {
+
     .trend-articles {
         width: 100%;
         display: flex;
         justify-content: flex-start;
-        margin-top: 1.7vw;
+        margin-top: 1.8vw;
         flex-wrap: wrap;
     }
+
 
     .trend-article {
         position: relative;
@@ -2124,7 +2289,6 @@ body {
     .trend-article-title-block {
         display: flex;
         text-transform: uppercase;
-        color: #b59f5b;
         font-family: OpenSans, Arial, sans-serif;
         font-weight: 700;
         font-size: 2.3vw;
@@ -2132,6 +2296,9 @@ body {
     }
     .trend-article-title {
         margin-right: 0.8vw;
+        color: #b59f5b;
+        text-decoration: none;
+        list-style-type: none;
     }
     .trend-article-title:hover {
         text-decoration: underline;
